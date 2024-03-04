@@ -16,7 +16,7 @@ enddate: 2024-05-23       # machine-readable end date for the workshop in YYYY-M
 instructor: ["Dr Amy H Fitzpatrick"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Eilidh Elizabeth Thomson"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["amy.fitzpatrick@ucd.ie"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+collaborative_notes: https://join.slack.com/t/rstatisticsve-c9p8018/shared_invite/zt-2e5vmdmup-ypax6DTT_O0UYFdrwOeTVg  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -197,9 +197,8 @@ special instructions.
   <li>Accessible restrooms are available.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
+  Materials will be provided in advance of the workshop. If we can help 
+  making learning easier for
   you please get in touch (using contact details below) and we will
   attempt to provide them.
 </p>
@@ -292,7 +291,6 @@ https://pad.carpentries.org/YYYY-MM-DD-site
 where 'YYYY-MM-DD-site' is the identifier for your workshop,
 e.g., '2015-06-10-esu'.
 
-{% comment %}
 Note we also have a CodiMD (the open-source version of HackMD)
 available at https://codimd.carpentries.org
 {% endcomment %}
@@ -300,10 +298,11 @@ available at https://codimd.carpentries.org
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
-We will use a <a href="{{ page.collaborative_notes }}">Slack channel</a> for chatting, taking notes, and sharing URLs and bits of code. You can download Slack or access it through your web browser. Please note, that you must use your UCDc email address to access the Slack channel. 
+We will use a <a href="{{ page.collaborative_notes }}">Slack channel</a> for chatting, taking notes, and sharing URLs and bits of code. You can download Slack or access it through your web browser. Please note, that you must use your UCD email address to access the Slack channel. 
 </p>
 <hr/>
 {% endif %}
+
 
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
@@ -328,55 +327,6 @@ change the value of `carpentry` to `incubator`.
 {% endif %}
 
 <hr/>
-
-
-{% comment %}
-SCHEDULE
-
-Show the workshop's schedule.
-
-Small changes to the schedule can be made by modifying the
-`schedule.html` found in the `_includes` folder for your
-workshop type (`swc`, `lc`, or `dc`). Edit the items and
-times in the table to match your plans. You may also want to
-change 'Day 1' and 'Day 2' to be actual dates or days of the
-week.
-
-For larger changes, a blank template for a 4-day workshop
-(useful for online teaching for instance) can be found in
-`_includes/custom-schedule.html`. Add the times, and what
-you will be teaching to this file. You may also want to add
-rows to the table if you wish to break down the schedule
-further. To use this custom schedule here, replace the block
-of code below the Schedule `<h2>` header below with
-`{% include custom-schedule.html %}`.
-{% endcomment %}
-
-<h2 id="schedule">Schedule</h2>
-
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in [The Carpentries Incubator](https://carpentries-incubator.org/).
-Please check [the lesson homepage]({{ site.incubator_lesson_site }}) for a list of lesson sections and estimated timings.
-{% endif %}
-
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
-
-{% if site.pilot %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please [contact the workshop organisers](#contact) if you would like more information about the planned schedule.
-{% endif %}
-
-<hr/>
-
 
 
 {% comment %}
@@ -466,7 +416,9 @@ For online workshops, the section below provides:
 - recommendations for setting up Learners' workspace so they can follow along
   the instructions and the videoconferencing
 
-to include the relevant installation instrucctions.
+If you do not use Zoom for your online workshop, edit the file
+`_includes/install_instructions/videoconferencing.html`
+to include the relevant installation instructions.
 {% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
