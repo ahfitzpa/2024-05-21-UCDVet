@@ -256,12 +256,13 @@ Edit the text to match who can attend the workshop. For instance:
 - This workshop is open to the public.
 - If you are interested in attending this workshop, contact me@example.com
   for more information
+{% endcomment %}
 
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ....
+   This workshop is open to UCD School of Veterinary Medicine staff and postgraduate students (hosted or otherwise). 
 </p>
-{% endcomment %}
+
 
 <hr/>
 
@@ -292,6 +293,7 @@ https://pad.carpentries.org/YYYY-MM-DD-site
 where 'YYYY-MM-DD-site' is the identifier for your workshop,
 e.g., '2015-06-10-esu'.
 
+{% comment %}
 Note we also have a CodiMD (the open-source version of HackMD)
 available at https://codimd.carpentries.org
 {% endcomment %}
@@ -299,11 +301,10 @@ available at https://codimd.carpentries.org
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+We will use a <a href="{{ page.collaborative_notes }}">Slack channel</a> for chatting, taking notes, and sharing URLs and bits of code. You can download Slack or access it through your web browser. Please note, that you must use your UCDc email address to access the Slack channel. 
 </p>
 <hr/>
 {% endif %}
-
 
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
